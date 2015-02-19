@@ -11,7 +11,7 @@ try {
 
 Package.describe({
   name: packageName,
-  version: bowerJson.version,
+  version: bowerJson.version + '_1',
   summary: 'Reactive Webix UI widgets bound to Meteor collections: table, tree, treetable, list etc.',
   git: 'https://github.com/dandv/meteor-webix',
   documentation: 'README.md'
