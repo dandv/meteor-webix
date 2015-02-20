@@ -7,9 +7,20 @@ var dataTable = {
   select: true,
   sortable: true,
   editable: true, editaction: 'dblclick',
+  resizeColumn: true,
   url:  webix.proxy('meteor', Movies),  // <-- this is it!
-  save: webix.proxy('meteor', Movies)
+  save: webix.proxy('meteor', Movies)   // Mongo.Collection
 };
+
+// http://docs.webix.com/desktop__list.html
+var list = {
+  view: 'list',
+  template: '#title# (#year#) is rated #rating#',
+  scroll: 'xy',  // enable both scrollbars
+  drag: 'order',  // for item order to be saved, we must add some code; otherwise, how would Meteor/Webix know in what Mongo record field to store the order?
+  url: webix.proxy('meteor', Movies.find({title: /e/}))  // Cursor
+};
+
 
 var toolbar = {
   view: 'toolbar',
@@ -44,6 +55,7 @@ var detailForm = {
       type: 'form',  // a Submit button; 'form' is an odd type name for buttons - http://docs.webix.com/api__ui.button_type_config.html#comment-1863007844
       click: function () {
         this.getFormView().save();
+        this.getFormView().clear();
       }
     }
   ]
@@ -55,8 +67,28 @@ Meteor.startup(function () {
     container: 'webix-playground',
     view: 'layout',
     rows: [
-      toolbar,
-      dataTable,
+      {
+        // view: 'layout',  -- inferred automatically when the keys are 'rows' and/or 'cols'
+        cols: [
+          {
+            // the first column is the table
+            rows: [
+              toolbar,
+              dataTable
+            ],
+            gravity: 2  // make this column 2x the width of the other one
+          },
+          {
+            // the second column is the filtered list, and it has two rows:
+            rows: [
+              {
+                view: 'template', type: 'header', template: 'Movies containing "e" (drag them!)'
+              },
+              list
+            ]
+          }
+        ]
+      },
       { view: 'resizer' },
       detailForm
     ]

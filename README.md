@@ -5,7 +5,7 @@ the best full-stack JavaScript framework (see [why](http://www.meteorpedia.com/r
 and [Webix](http://webix.com), arguably the best UI widgets library (see an
 [extensive comparison on StackOverflow](http://stackoverflow.com/questions/200284/what-are-alternatives-to-extjs)).
 
-Stay tuned by clicking **Watch** on GitHub.
+Stay tuned by clicking **Watch**/**Star** on GitHub.
 
 ## Demo
 
