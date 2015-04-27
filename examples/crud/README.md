@@ -1,6 +1,22 @@
 # Meteor+Webix CRUD example
 
-Simply run with `meteor run`. A live demo is at http://webix.meteor.com.
+First you need to download the submodules. In the main directory (i.e. the parent of `examples`), run:
+
+    git submodule update --init
+
+Then `cd examples/crud` and run `meteor`.
+
+A live demo is at http://webix.meteor.com.
+
+## Changing skins
+
+Run
+
+    meteor remove webix:skin-flat
+    
+and add another [available skin](https://atmospherejs.com/?q=webix%20skin) instead, such as:
+
+    meteor add webix:skin-web
 
 # Licensing
 

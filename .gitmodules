@@ -1,6 +1,6 @@
 [submodule "tracker"]
 	path = webix
-	url = git@github.com:dandv/tracker.git
+	url = git@github.com:webix-hub/tracker.git
 [submodule "webix-meteor-data"]
 	path = webix-meteor-data
 	url = git@github.com:dandv/webix-meteor-data.git

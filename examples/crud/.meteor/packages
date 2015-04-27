@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 webix:webix
+fortawesome:fontawesome
+webix:skin-web

@@ -14,6 +14,15 @@ Stay tuned by clicking **Watch**/**Star** on GitHub.
 
 ## Documentation
 
+Get started by adding the `webix:webix` package and a skin. For example, to add the default skin:
+
+    meteor add webix:webix
+    meteor add webix:skin-flat
+    
+If you use Font Awesome icons, or have [sortable tables](https://github.com/webix-hub/tracker/issues/223), install Font Awesome as well:
+
+    meteor add fortawesome:fontawesome
+
 Use Meteor collections as usual and simply specify `webix.proxy('meteor', Collection|Cursor)` for the
 `url` and `save` properties of the component:
 
@@ -34,7 +43,7 @@ More detailed documentation in the [webix-meteor-data README](../../../webix-met
 
 ## What works
 
-* package tests (font loading, visual check)
+* package tests (font loading via skins, visual check)
 * load and save data to/from reactive DataTable, List, and other widgets backed by
   [linear](http://docs.webix.com/desktop__dynamic_loading.html) data structures
 
@@ -48,8 +57,9 @@ More detailed documentation in the [webix-meteor-data README](../../../webix-met
 
 ## TODO
 
-* Webix wrapper for Meteor/Blaze reactive templates
-* routing
+* review
+  * Webix wrapper for Meteor/Blaze reactive templates
+  * routing
 * persist order of List/DataTable elements reordered via drag-and-drop (similar to
   [rubaxa:sortable](https://atmospherejs.com/rubaxa/sortable))
 * reactive [Multiview](http://docs.webix.com/desktop__multiview.html), similar to
