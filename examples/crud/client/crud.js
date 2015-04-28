@@ -8,13 +8,14 @@ var dataTable = {
   // But since we don't know what data in the DB might confused the autodetection, we'll specify:
   columns: [
     // http://docs.webix.com/api__ui.datatable_columns_config.html
-    { id: 'title', header: 'Title', fillspace: true }, // fill remaining width in the table
-    { id: 'year', header: 'Year', adjust: true },  // automatically adjust to content size
-    { id: 'rating', header: 'Rating', adjust: true }
+    { id: 'title', header: 'Title', editor: 'text', fillspace: true }, // fill remaining width in the table
+    { id: 'year', header: 'Year', editor: 'text', adjust: true },  // automatically adjust to content size
+    { id: 'rating', header: 'Rating', editor: 'text', adjust: true }
   ],
   select: true,
   sortable: true,
-  editable: true, editaction: 'dblclick',
+  editable: true,  // redundant, but see http://forum.webix.com/discussion/4328/editable-true-doesn-t-do-anything-if-columns-don-t-have-editor-specified
+  editaction: 'dblclick',
   resizeColumn: true,
   url:  webix.proxy('meteor', Movies),  // <-- this is it!
   save: webix.proxy('meteor', Movies)   // Mongo.Collection
