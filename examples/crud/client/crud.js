@@ -1,9 +1,17 @@
 'use strict';
 
+// http://docs.webix.com/api__refs__ui.datatable.html
 var dataTable = {
   view: 'datatable',
   id: 'datatable',
-  autoConfig: true,  // infer columns from data
+  // Columns can usually be omitted and they can be automatically detected with autoconfig: true
+  // But since we don't know what data in the DB might confused the autodetection, we'll specify:
+  columns: [
+    // http://docs.webix.com/api__ui.datatable_columns_config.html
+    { id: 'title', header: 'Title', fillspace: true }, // fill remaining width in the table
+    { id: 'year', header: 'Year', adjust: true },  // automatically adjust to content size
+    { id: 'rating', header: 'Rating', adjust: true }
+  ],
   select: true,
   sortable: true,
   editable: true, editaction: 'dblclick',
