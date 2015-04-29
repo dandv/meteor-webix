@@ -12,7 +12,7 @@ Stay tuned by clicking **Watch**/**Star** on GitHub.
 [CRUD example](http://webix.meteor.com) • [source](examples/crud) • [Meteor DevShop talk video](http://youtube.com/watch?v=s3ylMIf_0XU)
 
 
-## Documentation
+## Usage
 
 Get started by adding the `webix:webix` package and a skin. For example, to add the default skin:
 
@@ -38,7 +38,12 @@ webix.ui({
 });
 ```
 
-More detailed documentation in the [webix-meteor-data README](../../../webix-meteor-data).
+### Learn more
+
+* [Webix Quickstart](http://webix.com/quick-start) - interactive tutorial
+* [Getting started with Webix](http://docs.webix.com/desktop__getting_started.html) - documentation
+* [webix-meteor-data README](webix-meteor-data) - the Meteor - Webix adapter
+* [webix on GitHub](https://github.com/webix-hub/tracker)
 
 
 ## What works
@@ -73,11 +78,12 @@ More detailed documentation in the [webix-meteor-data README](../../../webix-met
 
 # Licensing
 
-Author: Dan Dascalescu ([@dandv](http://github.com/dandv))
+Meteor package author: Dan Dascalescu ([@dandv](http://github.com/dandv))
 
-Acknowledgments: the Webix team, and especially Maksim Kozhukh ([@mkozhukh](https://github.com/mkozhukh)).  
+Acknowledgments: the Webix team, and especially Maksim Kozhukh ([@mkozhukh](https://github.com/mkozhukh)) - the developers of the [webix-meteor-data adapter](https://github.com/webix-hub/webix-meteor-data).
+
 Webix is (C) 2013-2015 XB Software and is available under commercial and
-[GPLv3 licenses](http://forum.webix.com/discussion/2114/webix-gpl-as-ui-on-commercial-server).
+[GPLv3 licenses](http://forum.webix.com/discussion/2114/webix-gpl-as-ui-on-commercial-server). A [license exemption for non-GPL software](http://forum.webix.com/discussion/4023/does-an-open-source-app-that-uses-webix-have-to-become-gpl-licensed) is being worked on.
 
 This Webix package for Meteor is published under the MIT license.
 
