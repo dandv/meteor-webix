@@ -9,7 +9,8 @@ Stay tuned by clicking **Watch**/**Star** on GitHub.
 
 ## Demo
 
-[CRUD example](http://webix.meteor.com) • [source](examples/crud) • [Meteor DevShop talk video](http://youtube.com/watch?v=s3ylMIf_0XU)
+* [CRUD example](http://webix.meteor.com) • [source](examples/crud) • [Meteor DevShop talk video](http://youtube.com/watch?v=s3ylMIf_0XU)
+* Examples from the Webix team: [Meteor-centrix example](https://github.com/webix-hub/webix-meteor-example), [Webix-centric example](https://github.com/webix-hub/webix-meteor-example)
 
 
 ## Usage
@@ -19,7 +20,7 @@ Get started by adding the `webix:webix` package and a skin. For example, to add 
     meteor add webix:webix
     meteor add webix:skin-flat
     
-If you use Font Awesome icons, or have [sortable tables](https://github.com/webix-hub/tracker/issues/223), install Font Awesome as well:
+If you use Font Awesome icons, or have [sortable tables or other UI components that need Font Awesome icons](https://github.com/webix-hub/tracker/issues/223), install Font Awesome as well:
 
     meteor add fortawesome:fontawesome
 
@@ -62,6 +63,8 @@ webix.ui({
 
 ## TODO
 
+* map nested objects onto Webix forms ([#10](https://github.com/dandv/meteor-webix/issues/10))
+* client-side error messages on failed server operations via Collection.deny
 * review
   * Webix wrapper for Meteor/Blaze reactive templates
   * routing
