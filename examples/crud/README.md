@@ -1,22 +1,29 @@
-# Meteor+Webix CRUD example
+# Meteor+Webix CRUD + REST API example
+
+This demo uses webix:webix and nimble:restivus to create a simple CRUD application with a REST API.
+
+
+## Installation
 
 First you need to download the submodules. In the main directory (i.e. the parent of `examples`), run:
 
     git submodule update --init
 
-Then `cd examples/crud` and run `meteor`.
+Then `cd examples/crud` and run `meteor`. The REST API endpoint will be at `/api/movies`.
 
 A live demo is at http://webix.meteor.com.
+
 
 ## Changing skins
 
 Run
 
-    meteor remove webix:skin-flat
-    
+    meteor remove webix:skin-touch
+
 and add another [available skin](https://atmospherejs.com/?q=webix%20skin) instead, such as:
 
-    meteor add webix:skin-web
+    meteor add webix:skin-flat
+
 
 # Licensing
 
