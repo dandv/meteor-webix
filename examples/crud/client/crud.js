@@ -5,7 +5,7 @@ var dataTable = {
   view: 'datatable',
   id: 'datatable',
   // Columns can usually be omitted and they can be automatically detected with autoconfig: true
-  // But since we don't know what data in the DB might confused the autodetection, we'll specify:
+  // But since we don't know what data in the DB might confuse the autodetection, we'll specify:
   columns: [
     // http://docs.webix.com/api__ui.datatable_columns_config.html
     { id: 'title', header: 'Title', editor: 'text', fillspace: true }, // fill remaining width in the table
@@ -17,6 +17,12 @@ var dataTable = {
   editable: true,  // redundant, but see http://forum.webix.com/discussion/4328/editable-true-doesn-t-do-anything-if-columns-don-t-have-editor-specified
   editaction: 'dblclick',
   resizeColumn: true,
+  // validation
+  rules: {
+    'year': function (value) {
+      return value > 1890 && value < 2030
+    }  
+  },
   url:  webix.proxy('meteor', Movies),  // <-- this is it!
   save: webix.proxy('meteor', Movies)   // Mongo.Collection
 };
