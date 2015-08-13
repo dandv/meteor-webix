@@ -1,6 +1,6 @@
 # Meteor+Webix CRUD + REST API example
 
-This demo uses webix:webix and nimble:restivus to create a simple CRUD application with a REST API.
+This demo uses [webix:webix](https://atmospherejs.com/webix/webix) and [nimble:restivus](https://github.com/kahmali/meteor-restivus) to create a simple CRUD application with a REST API.
 
 
 ## Installation
