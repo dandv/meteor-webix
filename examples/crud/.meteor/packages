@@ -9,4 +9,5 @@ autopublish
 insecure
 webix:webix
 fortawesome:fontawesome
-webix:skin-web
+webix:skin-touch
+nimble:restivus

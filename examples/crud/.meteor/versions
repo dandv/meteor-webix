@@ -1,3 +1,4 @@
+accounts-base@1.2.0
 autopublish@1.0.3
 autoupdate@1.2.1
 base64@1.0.3
@@ -7,11 +8,12 @@ blaze-tools@1.0.3
 boilerplate-generator@1.0.3
 callback-hook@1.0.3
 check@1.0.5
+coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
 fastclick@1.0.3
-fortawesome:fontawesome@4.3.0
+fortawesome:fontawesome@4.4.0
 geojson-utils@1.0.3
 html-tools@1.0.4
 htmljs@1.0.4
@@ -22,6 +24,7 @@ jquery@1.11.3_2
 json@1.0.3
 launch-screen@1.0.2
 livedata@1.0.13
+localstorage@1.0.3
 logging@1.0.7
 meteor@1.1.6
 meteor-platform@1.2.2
@@ -29,6 +32,7 @@ minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
 mongo@1.1.0
+nimble:restivus@0.8.3
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 random@1.0.3
@@ -37,7 +41,9 @@ reactive-var@1.0.5
 reload@1.1.3
 retry@1.0.3
 routepolicy@1.0.5
+service-configuration@1.0.4
 session@1.1.0
+simple:json-routes@1.0.4
 spacebars@1.0.6
 spacebars-compiler@1.0.6
 templating@1.1.1
@@ -47,5 +53,5 @@ underscore@1.0.3
 url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
-webix:skin-web@2.3.8
-webix:webix@2.3.8_1
+webix:skin-touch@2.3.14
+webix:webix@2.5.0

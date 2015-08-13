@@ -63,6 +63,7 @@ webix.ui({
 
 ## TODO
 
+* clean up and [merge the disparate Webix repos](https://github.com/dandv/meteor-webix/issues/3#issuecomment-75139155)
 * map nested objects onto Webix forms ([#10](https://github.com/dandv/meteor-webix/issues/10))
 * client-side error messages on failed server operations via Collection.deny
 * review

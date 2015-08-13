@@ -10,7 +10,9 @@ var where = 'client';  // where to install: 'client' or 'server'. For both, pass
  * but not when running an example app that uses a local copy of the package because the current 
  * directory will be that of the app, and it won't have package.json. Find the path of a file is hard:
  * http://stackoverflow.com/questions/27435797/how-do-i-obtain-the-path-of-a-file-in-a-meteor-package
- * Therefore, we'll fall back to GitHub, and then to NPMJS.
+ * Therefore, we'll fall back to GitHub, because Bower doesn't have a REST API, and Webix isn't on NPM -
+ * http://forum.webix.com/discussion/4947/add-webix-to-npm-npmjs-com
+ *
  * We also don't have the HTTP package at this stage, and if we use Package.* in the request() callback,
  * it will error that it must be run in a Fiber. So we'll use Node futures.
  */
@@ -20,7 +22,7 @@ var Future = Npm.require('fibers/future');
 var fut = new Future;
 var version;
 
-try {
+if (!version) try {
   var packageJson = JSON.parse(Npm.require('fs').readFileSync('webix/bower.json'));
   version = packageJson.version;
 } catch (e) {
@@ -39,7 +41,7 @@ try {
       }).sort();  
       fut.return(versions[versions.length -1]);
     } else {
-      fut.throw('Could not get version information from ' + url + ' either (incorrect package name?):\n' + (response && response.statusCode || '') + (response && response.body || '') + (error || ''));
+      fut.throw('Could not get version information from ' + url + ' either (rate limit reached or incorrect package name?):\n' + (response && response.statusCode || '') + (response && response.body || '') + (error || ''));
     }
   });
 
