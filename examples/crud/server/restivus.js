@@ -4,6 +4,6 @@ var Api = new Restivus({
   prettyJson: true
 });
 
-// Generates: GET, POST on /api/items and GET, PUT, DELETE on
-// /api/items/:id for Items collection
+// Generates: GET, POST on /api/movies and GET, PUT, DELETE on
+// /api/movies/:id for the Movies collection
 Api.addCollection(Movies);

@@ -9,7 +9,9 @@ First you need to download the submodules. In the main directory (i.e. the paren
 
     git submodule update --init
 
-Then `cd examples/crud` and run `meteor`. The REST API endpoint will be at `/api/movies`.
+Then `cd examples/crud` and run `meteor`. On Windows, run `run.bat`.
+
+The REST API endpoint will be at `/api/movies`.
 
 A live demo is at http://webix.meteor.com.
 

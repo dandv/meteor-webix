@@ -3,12 +3,11 @@
 
 var packageName = 'webix:webix';  // https://atmospherejs.com/webix/webix
 var gitHubPath = 'webix-hub/tracker';  // https://github.com/webix-hub/tracker
-var where = 'client';  // where to install: 'client' or 'server'. For both, pass nothing.
 
 /* All of the below is just to get the version number of the 3rd party library.
  * First we'll try to read it from package.json. This works when publishing or testing the package
  * but not when running an example app that uses a local copy of the package because the current 
- * directory will be that of the app, and it won't have package.json. Find the path of a file is hard:
+ * directory will be that of the app, and it won't have package.json. Finding the path of a file is hard:
  * http://stackoverflow.com/questions/27435797/how-do-i-obtain-the-path-of-a-file-in-a-meteor-package
  * Therefore, we'll fall back to GitHub, because Bower doesn't have a REST API, and Webix isn't on NPM -
  * http://forum.webix.com/discussion/4947/add-webix-to-npm-npmjs-com
@@ -18,6 +17,7 @@ var where = 'client';  // where to install: 'client' or 'server'. For both, pass
  */
 var request = Npm.require('request');
 var Future = Npm.require('fibers/future');
+var semver = Npm.require('semver');  // to compare versions
 
 var fut = new Future;
 var version;
@@ -36,10 +36,10 @@ if (!version) try {
     }
   }, function (error, response, body) {
     if (!error && response.statusCode === 200) {
-      var versions = JSON.parse(body).map(function (version) {
-        return version['name'].replace(/^\D+/, '')  // trim leading non-digits from e.g. "v4.3.0"
-      }).sort();  
-      fut.return(versions[versions.length -1]);
+      var versions = JSON.parse(body).sort(function (v1, v2) {
+        return semver.compare(v2.name, v1.name);  // sort descending
+      });
+      fut.return(versions[0].name);
     } else {
       fut.throw('Could not get version information from ' + url + ' either (rate limit reached or incorrect package name?):\n' + (response && response.statusCode || '') + (response && response.body || '') + (error || ''));
     }

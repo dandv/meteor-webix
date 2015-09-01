@@ -1,3 +1,3 @@
-REM Git for Windows, as of v2.4.5, still hasn't implemented directory symlinking
+@REM Tell meteor where local packages directories are
 @set PACKAGE_DIRS=..\..\..\
 @meteor run %*
