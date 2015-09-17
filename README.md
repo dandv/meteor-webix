@@ -43,7 +43,7 @@ webix.ui({
 
 * [Webix Quickstart](http://webix.com/quick-start) - interactive tutorial
 * [Getting started with Webix](http://docs.webix.com/desktop__getting_started.html) - documentation
-* [webix-meteor-data README](webix-meteor-data) - the Meteor - Webix adapter
+* [webix-meteor-data README](https://github.com/dandv/webix-meteor-data) - the Meteor - Webix adapter
 * [webix on GitHub](https://github.com/webix-hub/tracker)
 
 
