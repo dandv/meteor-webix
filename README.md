@@ -1,15 +1,21 @@
 # Meteor.js - Webix UI integration
 
 This is work in progress on integrating [Meteor.js](http://meteor.com),
-the best full-stack JavaScript framework (see [why](http://www.meteorpedia.com/read/Why_Meteor))
+the best full-stack JavaScript framework (see [why](http://wiki.dandascalescu.com/essays/why_meteor))
 and [Webix](http://webix.com), arguably the best UI widgets library (see an
 [extensive comparison on StackOverflow](http://stackoverflow.com/questions/200284/what-are-alternatives-to-extjs)).
 
 Stay tuned by clicking **Watch**/**Star** on GitHub.
 
-## Demo
 
-* [CRUD example](http://webix.meteor.com) • [source](examples/crud) • [Meteor DevShop talk video](http://youtube.com/watch?v=s3ylMIf_0XU)
+## Webix standalone admin app demo
+
+[![Webix admin app demo screenshot](Webix-admin_app.png)](http://webix.com/demos/admin-app/#!/app/dashboard)
+
+
+## Meteor-Webix Demo
+
+* [CRUD example](http://webix.meteor.com) • [source](examples/crud) • [Meteor DevShop talk](http://slides.com/dandv/build-great-meteor-uis-without-html)
 * Examples from the Webix team: [Meteor-centrix example](https://github.com/webix-hub/webix-meteor-example), [Webix-centric example](https://github.com/webix-hub/webix-meteor-example)
 
 
@@ -73,11 +79,6 @@ webix.ui({
   [rubaxa:sortable](https://atmospherejs.com/rubaxa/sortable))
 * reactive [Multiview](http://docs.webix.com/desktop__multiview.html), similar to
   [templates:tabs](https://atmospherejs.com/templates/tabs)
-
-
-## Webix admin app demo
-
-[![Webix admin app demo screenshot](Webix-admin_app.png)](http://webix.com/demos/admin-app/#!/app/dashboard)
 
 
 # Licensing
